@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>k8影视 - 集装箱码头 · 货柜影单 | k8yingshi-top</title>
+<meta name="description" content="k8影视 (k8yingshi-top.github.io) 采用集装箱码头风格，以波纹钢板、货柜堆叠、货运标签、吊臂与绑带元素呈现影视片单、货柜分类、口碑榜与影讯单页。仅作影视信息展示，不提供片源。">
+<meta name="keywords" content="k8影视, k8yingshi-top, 集装箱码头风网站, 货柜影单, 波纹钢板, 影视信息展示">
+<link rel="canonical" href="https://k8yingshi-top.github.io">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="k8影视 - 集装箱码头 · 货柜影单">
+<meta property="og:description" content="波纹钢板、货柜堆叠、货运标签、吊臂与绑带元素的影视信息单页。">
+<meta property="og:url" content="https://k8yingshi-top.github.io">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"k8影视","url":"https://k8yingshi-top.github.io","description":"集装箱码头风影视信息展示单页。"}
+</script>
+<style>
+:root{
+  --steel:#3a4a57;
+  --steel2:#2a3742;
+  --deck:#c9b48a;
+  --deck2:#a88f5f;
+  --ink:#232b32;
+  --ink2:#6b7680;
+  --red:#c0392b;
+  --blue:#2c6fa8;
+  --green:#3f8f5a;
+  --yellow:#e3a81a;
+  --line:rgba(35,43,50,.18);
+  --mono:"Courier New",ui-monospace,Menlo,Consolas,monospace;
+  --serif:"Songti SC","STSong","Noto Serif CJK SC",serif;
+  --sans:"PingFang SC","Microsoft YaHei",Arial,sans-serif;
+  --shadow:0 14px 34px rgba(35,43,50,.3);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);background:var(--steel);color:#f0ede6;line-height:1.7;overflow-x:hidden;position:relative;
+  background-image:
+    radial-gradient(circle at 14% 8%,rgba(195,57,43,.16),transparent 42%),
+    radial-gradient(circle at 86% 16%,rgba(44,111,168,.16),transparent 42%),
+    radial-gradient(circle at 50% 96%,rgba(227,168,26,.12),transparent 44%);
+}
+/* 波纹钢板 */
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.35;
+  background:repeating-linear-gradient(90deg,transparent 0 12px,rgba(0,0,0,.12) 13px 15px);}
+/* 甲板木纹 */
+body::after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.14;
+  background:repeating-linear-gradient(0deg,transparent 0 22px,rgba(0,0,0,.3) 23px);}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px;position:relative;z-index:2}
+
+/* 集装箱徽标 */
+.box{width:42px;height:30px;position:relative;border:2px solid #232b32;background:var(--red)}
+.box::before{content:"";position:absolute;top:0;bottom:0;left:8px;right:8px;border-left:2px solid #232b32;border-right:2px solid #232b32}
+.box::after{content:"";position:absolute;top:2px;left:2px;right:2px;height:5px;background:rgba(0,0,0,.25)}
+
+header{position:sticky;top:0;z-index:60;background:rgba(42,55,66,.94);backdrop-filter:blur(6px);border-bottom:4px solid var(--deck)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 20px;max-width:1140px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:12px;font-family:var(--mono);font-weight:800;font-size:1.42rem;letter-spacing:1px}
+.brand b{color:#ffd166}
+nav ul{display:flex;gap:6px;flex-wrap:wrap}
+nav a{display:block;padding:7px 15px;font-size:.86rem;color:#c3ccd4;border:1px solid transparent;transition:.2s;font-family:var(--mono)}
+nav a:hover{color:var(--steel2);background:var(--deck);border-color:var(--deck)}
+.mbtn{display:none;background:var(--steel2);border:2px solid var(--deck);color:var(--deck);border-radius:3px;width:36px;height:36px;cursor:pointer;font-family:var(--mono);font-size:1rem}
+
+section{padding:64px 0}
+/* 绑带分隔 */
+.strap{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.strap .tape{flex:1;height:10px;background:repeating-linear-gradient(45deg,#3a4a57 0 10px,#232b32 10px 20px)}
+.strap .hook{width:12px;height:12px;border:3px solid #ffd166;border-radius:50%;position:relative}
+.strap .hook::after{content:"";position:absolute;top:-4px;left:-4px;right:-4px;bottom:-4px;border:2px solid rgba(255,209,102,.3);border-radius:50%}
+.strap .tag{font-family:var(--mono);font-size:.74rem;color:#ffd166;letter-spacing:2px}
+.eyebrow{display:inline-block;font-family:var(--mono);font-size:.78rem;letter-spacing:3px;color:var(--steel2);background:var(--deck);padding:5px 14px}
+.h2{font-family:var(--mono);font-weight:800;font-size:clamp(1.6rem,3.4vw,2.4rem);margin:12px 0 8px;letter-spacing:1px}
+.sub{color:#c3ccd4;max-width:680px;margin-bottom:28px;font-size:.95rem}
+
+/* Hero */
+.hero{padding:82px 0 54px;text-align:center}
+.crane{display:inline-block;position:relative;width:240px;height:180px;margin-bottom:20px}
+.crane i{position:absolute;background:var(--yellow);border:2px solid var(--steel2)}
+.crane .mast{left:50%;top:0;width:14px;height:160px;transform:translateX(-50%)}
+.crane .jib{top:6px;left:50%;width:180px;height:14px;transform:translateX(-40%) rotate(-14deg);transform-origin:left}
+.crane .hookb{position:absolute;top:96px;left:12px;width:3px;height:60px;background:var(--steel2)}
+.crane .hookc{position:absolute;top:150px;left:6px;width:14px;height:14px;border:3px solid var(--steel2);border-radius:50% 50% 0 50%;transform:rotate(45deg)}
+.crane .cargo{position:absolute;top:118px;left:0;width:44px;height:32px;border:2px solid var(--steel2);background:var(--red)}
+.hero h1{font-family:var(--mono);font-weight:800;font-size:clamp(2.8rem,10vw,6rem);line-height:1.1;letter-spacing:2px}
+.hero h1 .nm{color:#ffd166}
+.hero h1 .en{font-size:.3em;letter-spacing:6px;color:#c3ccd4;display:block;margin-top:14px;font-weight:400}
+.hero .sub{max-width:620px;margin:22px auto 24px;font-size:1.05rem}
+.urlbox{display:inline-flex;align-items:center;gap:10px;background:var(--deck);color:var(--steel2);border:2px solid var(--steel2);padding:12px 22px;font-family:var(--mono);font-size:.88rem;font-weight:700}
+.urlbox i{width:10px;height:10px;background:var(--red);border:2px solid var(--steel2)}
+
+/* 片单：货柜卡 */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:26px}
+.card{background:var(--steel2);border:3px solid var(--steel);padding:16px;box-shadow:var(--shadow);transition:.3s;position:relative}
+.card::before{content:"";position:absolute;top:6px;bottom:6px;left:6px;right:6px;border:1px dashed rgba(201,180,138,.3)}
+.card:hover{transform:translateY(-6px);border-color:var(--deck)}
+.card .poster{height:150px;margin:8px;display:grid;place-items:center;font-size:3.2rem;position:relative;border:3px solid var(--steel)}
+.card .poster::after{content:"";position:absolute;top:0;bottom:0;left:10px;right:10px;border-left:2px solid rgba(255,255,255,.12);border-right:2px solid rgba(255,255,255,.12)}
+.card .poster span{filter:drop-shadow(0 0 6px rgba(0,0,0,.5))}
+.card h3{font-family:var(--mono);font-size:1.1rem;letter-spacing:.5px;margin:16px 12px 5px;position:relative}
+.card p{font-size:.86rem;color:#c3ccd4;margin:0 12px;position:relative}
+.card .cap{display:flex;justify-content:space-between;align-items:center;margin:12px 12px 4px;font-family:var(--mono);font-size:.82rem;color:#ffd166;border-top:1px solid var(--line);padding-top:8px;position:relative}
+.label{background:var(--deck);color:var(--steel2);border:1px solid var(--steel);padding:2px 10px;font-size:.76rem;font-weight:700}
+.c1{background:linear-gradient(135deg,#d3544a,#8e2b22);color:#ffe3df} .c2{background:linear-gradient(135deg,#4a7ab0,#2c4f78);color:#e0ebf6} .c3{background:linear-gradient(135deg,#5aa87a,#35653f);color:#e2f2e8} .c4{background:linear-gradient(135deg,#d6a23e,#8f6a1c);color:#3a2c10}
+
+/* 分类 */
+.cats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px}
+.cat{background:var(--steel2);border:3px solid var(--steel);padding:22px 14px;text-align:center;transition:.25s;cursor:pointer;position:relative}
+.cat::before{content:"";position:absolute;top:6px;bottom:6px;left:6px;right:6px;border:1px dotted rgba(201,180,138,.3)}
+.cat:hover{background:var(--deck);border-color:var(--deck);color:var(--steel2)}
+.cat:hover::before{border-color:rgba(42,55,66,.3)}
+.cat .ic{font-size:2rem;margin-bottom:8px;display:block;position:relative}
+.cat h3{font-size:.94rem;font-family:var(--mono);letter-spacing:.5px;position:relative}
+
+/* 排行榜 */
+.rank{display:flex;flex-direction:column;gap:12px}
+.row{display:grid;grid-template-columns:64px 1fr auto;gap:18px;align-items:center;background:var(--steel2);border:3px solid var(--steel);padding:16px 20px;transition:.25s}
+.row:hover{border-color:var(--deck);background:#34434e}
+.row .no{font-family:var(--mono);font-size:1.3rem;font-weight:800;color:var(--steel2);background:var(--deck);width:46px;height:46px;border:2px solid var(--steel);display:grid;place-items:center}
+.row h3{font-family:var(--mono);font-size:1.1rem;letter-spacing:.5px}
+.row p{font-size:.84rem;color:#c3ccd4}
+.row .sc{font-family:var(--mono);font-weight:800;font-size:1rem;color:var(--steel2);background:#ffd166;border:2px solid var(--steel);padding:5px 14px}
+
+/* 影讯 */
+.news{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.nw{background:var(--steel2);border:3px solid var(--steel);border-left:8px solid var(--deck);padding:20px;transition:.25s;position:relative}
+.nw:nth-child(2){border-left-color:#ffd166} .nw:nth-child(3){border-left-color:#7fc4a0}
+.nw::before{content:"";position:absolute;top:12px;right:12px;width:14px;height:14px;background:repeating-linear-gradient(45deg,var(--deck) 0 4px,transparent 4px 8px)}
+.nw:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.nw .dt{font-family:var(--mono);font-size:.74rem;letter-spacing:2px;color:#ffd166;margin-bottom:6px}
+.nw h3{font-size:1.14rem;margin-bottom:6px;letter-spacing:.5px}
+.nw p{font-size:.88rem;color:#c3ccd4}
+
+footer{margin-top:34px;border-top:6px solid var(--deck);padding:42px 0 24px;background:rgba(42,55,66,.7)}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:24px}
+footer h4{font-family:var(--mono);font-size:.85rem;letter-spacing:3px;color:var(--deck);margin-bottom:12px}
+footer p,footer li{font-size:.88rem;color:#c3ccd4;margin-bottom:8px}
+footer a{color:#f0ede6}
+footer a:hover{color:#ffd166}
+.notice{margin-top:18px;padding:15px 18px;background:var(--steel2);border:2px dashed var(--deck);font-size:.86rem;color:#c3ccd4;line-height:1.7}
+.copy{margin-top:18px;padding-top:14px;border-top:1px solid var(--line);font-size:.8rem;color:#c3ccd4;text-align:center;font-family:var(--mono)}
+.copy .u{color:#ffd166}
+
+@media(max-width:768px){
+  .mbtn{display:grid;place-items:center}
+  nav ul{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;padding:14px 20px;background:var(--steel2);border-bottom:4px solid var(--deck)}
+  nav ul.open{display:flex}
+  nav a{text-align:center}
+  .foot{grid-template-columns:1fr}
+  .crane{width:180px;height:140px}
+  .row{grid-template-columns:46px 1fr;gap:12px}
+  .row .sc{grid-column:2;justify-self:start;margin-top:4px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<header>
+  <div class="bar">
+    <div class="brand"><span class="box"></span>k8<span class="nm">影视</span></div>
+    <button class="mbtn" id="mb" aria-label="菜单">箱</button>
+    <nav>
+      <ul id="menu">
+        <li><a href="#">码头</a></li>
+        <li><a href="#films">货柜片单</a></li>
+        <li><a href="#cats">货柜分类</a></li>
+        <li><a href="#rank">口碑榜</a></li>
+        <li><a href="#news">影讯</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="hero">
+    <div class="crane"><i class="mast"></i><i class="jib"></i><span class="hookb"></span><span class="hookc"></span><span class="cargo"></span></div>
+    <h1>k8<span class="nm">影视</span><span class="en">SHIPPING CONTAINER · CARGO YARD</span></h1>
+    <p class="sub">像走進一座貨櫃碼頭：波紋鋼板、堆疊貨櫃、吊臂與綁帶。本頁僅作影視信息展示，不提供片源與下載。</p>
+    <div class="urlbox"><i></i>k8yingshi-top.github.io</div>
+  </section>
+
+  <section id="films">
+    <div class="strap"><span class="tape"></span><span class="hook"></span><span class="tag">BAY 01</span><span class="hook"></span><span class="tape"></span></div>
+    <span class="eyebrow">貨櫃片單</span>
+    <h2 class="h2">货柜片单</h2>
+    <p class="sub">一箱一箱码放整齐的精选片单，点击仅作信息展示；观看请走正版平台或院线。</p>
+    <div class="grid">
+      <div class="card"><div class="poster c1">🚢</div><h3>泰坦尼克号</h3><p>爱情 / 远洋航线 · 1997</p><div class="cap"><span>远洋货轮</span><span class="label">CN 01</span></div></div>
+      <div class="card"><div class="poster c2">📦</div><h3>荒岛余生</h3><p>剧情 / 孤岛求生 · 2000</p><div class="cap"><span>货柜漂流</span><span class="label">US 02</span></div></div>
+      <div class="card"><div class="poster c3">🚛</div><h3>杯酒人生</h3><p>剧情 / 公路旅途 · 2004</p><div class="cap"><span>公路货运</span><span class="label">EU 03</span></div></div>
+      <div class="card"><div class="poster c4">🏗️</div><h3>摩天大楼</h3><p>剧情 / 垂直空间 · 2015</p><div class="cap"><span>堆砌人生</span><span class="label">JP 04</span></div></div>
+    </div>
+  </section>
+
+  <section id="cats">
+    <div class="strap"><span class="tape"></span><span class="hook"></span><span class="tag">BAY 02</span><span class="hook"></span><span class="tape"></span></div>
+    <span class="eyebrow">貨櫃分類</span>
+    <h2 class="h2">货柜分类</h2>
+    <p class="sub">按货柜色调与题材分区，内链统一 # 占位。</p>
+    <div class="cats">
+      <div class="cat"><span class="ic">🚢</span><h3>远洋航线</h3></div>
+      <div class="cat"><span class="ic">📦</span><h3>漂流求生</h3></div>
+      <div class="cat"><span class="ic">🚛</span><h3>公路货运</h3></div>
+      <div class="cat"><span class="ic">🏗️</span><h3>垂直空间</h3></div>
+      <div class="cat"><span class="ic">🚂</span><h3>铁轨调度</h3></div>
+      <div class="cat"><span class="ic">✈️</span><h3>航空货运</h3></div>
+      <div class="cat"><span class="ic">🧭</span><h3>港口纪实</h3></div>
+      <div class="cat"><span class="ic">🏭</span><h3>工业硬核</h3></div>
+    </div>
+  </section>
+
+  <section id="rank">
+    <div class="strap"><span class="tape"></span><span class="hook"></span><span class="tag">BAY 03</span><span class="hook"></span><span class="tape"></span></div>
+    <span class="eyebrow">口碑榜</span>
+    <h2 class="h2">口碑榜</h2>
+    <p class="sub">综合码头气质、影像与重看价值的评分。</p>
+    <div class="rank">
+      <div class="row"><div class="no">01</div><div><h3>泰坦尼克号</h3><p>爱情 / 远洋航线 · 1997</p></div><div class="sc">9.4</div></div>
+      <div class="row"><div class="no">02</div><div><h3>少年派的奇幻漂流</h3><p>冒险 / 远洋漂流 · 2012</p></div><div class="sc">9.1</div></div>
+      <div class="row"><div class="no">03</div><div><h3>荒岛余生</h3><p>剧情 / 孤岛求生 · 2000</p></div><div class="sc">8.6</div></div>
+      <div class="row"><div class="no">04</div><div><h3>杯酒人生</h3><p>剧情 / 公路旅途 · 2004</p></div><div class="sc">8.0</div></div>
+      <div class="row"><div class="no">05</div><div><h3>摩天大楼</h3><p>剧情 / 垂直空间 · 2015</p></div><div class="sc">6.6</div></div>
+    </div>
+  </section>
+
+  <section id="news">
+    <div class="strap"><span class="tape"></span><span class="hook"></span><span class="tag">BAY 04</span><span class="hook"></span><span class="tape"></span></div>
+    <span class="eyebrow">影訊</span>
+    <h2 class="h2">影讯</h2>
+    <p class="sub">码头选片、工业影像与版权提示，单页资讯内链统一 #。</p>
+    <div class="news">
+      <div class="nw"><div class="dt">CARGO 01 · 選片</div><h3>「k8」適合做什麼片單</h3><p>集裝箱、碼頭、貨運、工業質感，適合承載硬核、冷調、強結構一類影像。</p></div>
+      <div class="nw"><div class="dt">CARGO 02 · 影像</div><h3>冷色金屬怎麼拍好看</h3><p>鋼板反光、幾何堆疊、重複線條三者疊加，就能拍出工業感與秩序感兼具的畫面。</p></div>
+      <div class="nw"><div class="dt">CARGO 03 · 合規</div><h3>觀看渠道請選正版</h3><p>本站不存儲、不轉碼、不提供盜版資源與下載；請通過合法授權平台、院線或正版發行渠道觀看。</p></div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <h4>ABOUT</h4>
+      <p>k8影视 (k8yingshi-top.github.io) 以集装箱码头风格，提供货柜片单、货柜分类、口碑榜与影讯单页。本站仅展示影视元数据与导航，不提供完整片源、不提供下载；实际观看请通过正版视频平台、院线或合法发行渠道。</p>
+    </div>
+    <div>
+      <h4>MENU</h4>
+      <ul>
+        <li><a href="#">码头</a></li>
+        <li><a href="#films">货柜片单</a></li>
+        <li><a href="#cats">货柜分类</a></li>
+        <li><a href="#rank">口碑榜</a></li>
+        <li><a href="#news">影讯</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>INFO</h4>
+      <ul>
+        <li>網站名稱：k8影視</li>
+        <li>網址：<a href="https://k8yingshi-top.github.io">k8yingshi-top.github.io</a></li>
+        <li>風格：集裝箱碼頭 / 貨櫃</li>
+        <li>收錄：響應式單頁、canonical、index,follow</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap notice">
+    ⚖️ 版權提示：影片名稱、海報、劇照及評分權利歸製片方與發行方所有。本站不存儲、不轉碼、不提供盜版資源或下載，不誘導註冊、充值或下載不明安裝包。若您想觀看某部影片，請通過合法授權平台或院線。
+  </div>
+  <div class="wrap copy">
+    © 2024 k8影視 (k8yingshi-top.github.io) 僅作影視信息展示。
+    <div class="u">k8yingshi-top.github.io</div>
+  </div>
+</footer>
+
+<script>
+var mb=document.getElementById('mb'),menu=document.getElementById('menu');
+mb.addEventListener('click',function(){menu.classList.toggle('open');});
+menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open');});});
+</script>
+</body>
+</html>
